@@ -1,14 +1,16 @@
 [
     {
         "id": 1,
-        "name": "John Doe",
+        "username": "torvalds",
+        "name": "Linus Torvald",
         "latitude": 37.7879,
-        "longitude": 122.4074
+        "longitude": -122.4074
     },
     {
         "id": 2,
+        "username": "janedoe12",
         "name": "Jane Doe",
         "latitude": 37.8021,
-        "longitude": 122.3790
+        "longitude": -122.3790
     }
 ]

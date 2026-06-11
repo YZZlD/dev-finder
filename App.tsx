@@ -28,14 +28,27 @@ export default function App() {
     checkUsernameExists();
   }, []);
 
+  useEffect(() => {
+    const reset = async () => {
+      await AsyncStorage.removeItem('githubUsername');
+      setUsernameExists(false);
+      setLoading(false);
+    };
+
+    reset();
+  }, []);
+
   //Prevent rendering before username has been checked from async storage
   if(loading) return null;
 
+  console.log(usernameExists);
+
   return (
+
     //Profile is always available to route to. Signup is conditionally shown when there is no username information
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        {usernameExists? (
+        {usernameExists ? (
           <Stack.Screen name="Map" component={MapScreen} />
           ) : (
             <>
