@@ -6,7 +6,9 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Profile'>;
 
 export default function ProfileScreen( {route} : Props)
 {
-    const { username } = route.params
+    //Grab the username from the route parameters to display the github profile in webview wrapper.
+    const { username } = route.params;
+
     return (
         <WebView
             source={{ uri: `https://github.com/${username}` }}
