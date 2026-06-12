@@ -41,8 +41,11 @@ export default function GithubUserMarker({ user, onPress} : Props)
 
 const styles = StyleSheet.create({
     avatar: {
-        width: "100%",
-        height: "100%",
+        width: 64,
+        height: 64,
+        borderWidth: 4,
+        borderColor: '#E8EAED',
+        borderRadius: 32,
     },
 
     details: {

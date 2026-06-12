@@ -23,6 +23,7 @@ export default function MapScreen( { navigation } : Props)
                     <GithubUserMarker
                         key={user.id}
                         user={user}
+                        // By passing navigation as a callback we simplify navigation references for components
                         onPress={() => {
                             navigation.navigate("Profile", {
                                 username: user.username
